@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    container_name: hello-ci-cd
+    ports:
+      - "5000:4000"   # host:container
+    volumes:
+      - .:/app
+    environment:
+      PORT: 5000
